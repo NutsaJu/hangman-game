@@ -10,7 +10,7 @@ import { Wrapper, TextWrapper } from "./engHangMan";
 const KaHangMan: React.FC = () => {
   /* Define Word which will be guessed, Guessed Letters which will be an empty array and after user writes letter, we define incorrect
   letters*/
-  const [wordToGuess, setWordToGuess] = useState(() => {
+  const [wordToGuess] = useState(() => {
     return kaWords[Math.floor(Math.random() * kaWords.length)];
   });
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
@@ -46,7 +46,7 @@ const KaHangMan: React.FC = () => {
     return () => {
       document.removeEventListener("keypress", handler);
     };
-  }, [guessedLetters]);
+  }, [guessedLetters, addGuessedLetters]);
 
   return (
     <Wrapper>
