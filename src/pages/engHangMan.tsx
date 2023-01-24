@@ -10,7 +10,7 @@ import { NavLink } from "react-router-dom";
 const EngHangMan: React.FC = () => {
   /* Define Word which will be guessed, Guessed Letters which will be an empty array and after user writes letter, we define incorrect
   letters*/
-  const [wordToGuess, setWordToGuess] = useState(() => {
+  const [wordToGuess] = useState(() => {
     return engWords[Math.floor(Math.random() * engWords.length)];
   });
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
@@ -46,7 +46,7 @@ const EngHangMan: React.FC = () => {
     return () => {
       document.removeEventListener("keypress", handler);
     };
-  }, [guessedLetters]);
+  }, [guessedLetters, addGuessedLetters]);
 
   return (
     <Wrapper>
