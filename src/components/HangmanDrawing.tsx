@@ -148,20 +148,20 @@ const RigthLeg = styled.div`
   width: 16%;
   right: 20%;
   height: 10px;
-  top: 58%;
+  top: 57%;
   background-color: white;
   position: absolute;
   rotate: 60deg;
   transform-origin: left bottom;
   @media (max-width: 400px) {
-    right: 21%;
+    right: 20.5%;
   }
 `;
 const LeftLeg = styled.div`
   width: 16%;
   right: 34%;
   height: 10px;
-  top: 58%;
+  top: 57%;
   background-color: white;
   position: absolute;
   rotate: -60deg;

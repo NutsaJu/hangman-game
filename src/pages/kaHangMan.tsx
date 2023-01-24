@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import kaWords from "../data/kaWordList.json";
-import styled from "styled-components";
 import HangmanDrawing from "../components/HangmanDrawing";
 import HangmanWord from "../components/HangmanWord";
 import { NavLink } from "react-router-dom";
@@ -19,7 +18,6 @@ const KaHangMan: React.FC = () => {
     (letter) => !wordToGuess.includes(letter)
   );
 
-  console.log(wordToGuess)
   /* Define if user is winner or loser*/
   const isLoser = incorrectLetters.length >= 6;
   const isWinner = wordToGuess
